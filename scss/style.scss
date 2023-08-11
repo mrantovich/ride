@@ -94,15 +94,34 @@ body {
         margin-bottom: 6.2rem;
     }
 
-    &__actions {}
+    &__actions {
+        display: flex;
+    }
 
     &__actions-buy {
         display: flex;
         align-items: center;
         height: 5.8rem;
-        max-width: 16.2rem;
+        width: 18.4rem;
+        margin-right: 7.73rem;
 
         &:hover {
+            cursor: pointer;
+            .gen__actions-buy-button {
+                background: $color-secondary;
+                border: 0.1rem solid $color-primary;
+                &::after {
+                    background: $color-primary;
+                    }
+                &::before {
+                    border-color: transparent transparent transparent $color-primary;
+                    }
+                }
+            
+            .gen__actions-buy-text {
+                background: $color-primary;
+                color: $color-secondary;
+            }
         }
     }
 
@@ -139,25 +158,46 @@ body {
             border-color: transparent transparent transparent $color-secondary;
             transition: 0.3s;
         }
-
-        &:hover {
-            cursor: pointer;
-            background: $color-secondary;
-            border: 0.1rem solid $color-primary;
-            &::after {
-                background: $color-primary;
-            }
-            &::before {
-                border-color: transparent transparent transparent $color-primary;
-            }
-        }
     }
 
     &__actions-buy-text {
         padding-left: 2.2rem;
+        padding-right: 2.2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
         color: $color-black;
         font-size: 2rem;
         font-weight: 500;
+        transition: 0.3s;
+    }
+
+    &__actions-watch {
+        display: flex;
+        width: 18.8rem;
+        height: 100%;
+    }
+
+    &__actions-watch-text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+        max-width: 8.7rem;
+        margin-right: 2.1rem;
+    }
+
+    &__actions-watch-button {
+        animation-name: spinning-circle;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        width: 8rem;
+        height: 8rem;
+
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
     }
 }
 
@@ -210,6 +250,15 @@ body {
     &:hover {
         color: $color-primary;
         background: $color-secondary;
+    }
+}
+
+@keyframes spinning-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 

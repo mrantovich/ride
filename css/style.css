@@ -144,11 +144,32 @@ body {
   line-height: 3.4rem;
   margin-bottom: 6.2rem;
 }
+.gen__actions {
+  display: flex;
+}
 .gen__actions-buy {
   display: flex;
   align-items: center;
   height: 5.8rem;
-  max-width: 16.2rem;
+  width: 18.4rem;
+  margin-right: 7.73rem;
+}
+.gen__actions-buy:hover {
+  cursor: pointer;
+}
+.gen__actions-buy:hover .gen__actions-buy-button {
+  background: #ffffff;
+  border: 0.1rem solid #42454A;
+}
+.gen__actions-buy:hover .gen__actions-buy-button::after {
+  background: #42454A;
+}
+.gen__actions-buy:hover .gen__actions-buy-button::before {
+  border-color: transparent transparent transparent #42454A;
+}
+.gen__actions-buy:hover .gen__actions-buy-text {
+  background: #42454A;
+  color: #ffffff;
 }
 .gen__actions-buy-button {
   position: relative;
@@ -182,22 +203,41 @@ body {
   border-color: transparent transparent transparent #ffffff;
   transition: 0.3s;
 }
-.gen__actions-buy-button:hover {
-  cursor: pointer;
-  background: #ffffff;
-  border: 0.1rem solid #42454A;
-}
-.gen__actions-buy-button:hover::after {
-  background: #42454A;
-}
-.gen__actions-buy-button:hover::before {
-  border-color: transparent transparent transparent #42454A;
-}
 .gen__actions-buy-text {
   padding-left: 2.2rem;
+  padding-right: 2.2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
   color: #000;
   font-size: 2rem;
   font-weight: 500;
+  transition: 0.3s;
+}
+.gen__actions-watch {
+  display: flex;
+  width: 18.8rem;
+  height: 100%;
+}
+.gen__actions-watch-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  max-width: 8.7rem;
+  margin-right: 2.1rem;
+}
+.gen__actions-watch-button {
+  animation-name: spinning-circle;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  width: 8rem;
+  height: 8rem;
+}
+.gen__actions-watch-button img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .separator {
@@ -243,4 +283,13 @@ body {
 .button:hover {
   color: #42454A;
   background: #ffffff;
+}
+
+@keyframes spinning-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
