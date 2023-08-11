@@ -1,0 +1,215 @@
+@import 'nullstyle';
+@import 'colors';
+
+html, body {
+    font-size: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: $color-primary;
+}
+
+body {
+    padding-bottom: 10rem;
+}
+
+.container {
+    max-width: 140rem;
+    height: 100%;
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+.header {
+    height: 10rem;
+    border-bottom: 0.1rem solid $color-light;
+
+    &__box {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__actions {
+        display: flex;
+    }
+
+    &__button {
+
+        &_separate {
+            margin-right: 1.5rem;
+        }
+    }
+
+}
+
+.nav {
+
+    &__menu {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 7.6rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        color: $color-primary;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+.gen {
+    padding-top: 8.7rem;
+    position: relative;
+
+    &__title {
+        margin-bottom: 9.3rem;
+    }
+
+    &__info {
+        max-width: 58.6rem;
+    }
+
+    &__image {
+        position: absolute;
+        top: 3.4rem;
+        right: 0;
+    }
+
+    &__separator {
+        margin-bottom: 6.2rem;
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        font-weight: 400;
+        max-width: 35.3rem;
+        line-height: 3.4rem;
+        margin-bottom: 6.2rem;
+    }
+
+    &__actions {}
+
+    &__actions-buy {
+        display: flex;
+        align-items: center;
+        height: 5.8rem;
+        max-width: 16.2rem;
+
+        &:hover {
+        }
+    }
+
+    &__actions-buy-button {
+        position: relative;
+        height: 100%;
+        width: 5.8rem;
+        background: $color-primary;
+        border: 0.1rem solid transparent;
+        transition: 0.3s;
+
+        &::after {
+            content: '';
+            background: $color-secondary;
+            width: 1rem;
+            height: 0.2rem;
+            position: absolute;
+            top: 50%;
+            left: 38%;
+            transform: translate(0, -50%);
+            transition: 0.3s;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(0, -50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 8.7px;
+            border-color: transparent transparent transparent $color-secondary;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background: $color-secondary;
+            border: 0.1rem solid $color-primary;
+            &::after {
+                background: $color-primary;
+            }
+            &::before {
+                border-color: transparent transparent transparent $color-primary;
+            }
+        }
+    }
+
+    &__actions-buy-text {
+        padding-left: 2.2rem;
+        color: $color-black;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+.separator {
+    display: block;
+    width: 33.5rem;
+    height: 0.4rem;
+    background: $color-primary;
+}
+
+.title {
+    
+    &_huge {
+        text-transform: uppercase;
+        font-size: 9rem;
+        font-weight: 300;
+        line-height: 9.5rem;
+
+        & span {
+            font-weight: 700;
+        }
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    width: 10.6rem;
+    height: 4.8rem;
+    color: $color-secondary;
+    background: $color-primary;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border: 0.1rem solid $color-primary;
+    border-radius: 0.8rem;
+    transition: 0.3s;
+
+    &_light {
+        color: $color-primary;
+        background: transparent;
+        border: 0.1rem solid transparent;
+
+        &:hover {
+            border: 0.1rem solid $color-primary;
+        }
+    }
+
+    &:hover {
+        color: $color-primary;
+        background: $color-secondary;
+    }
+}
+
