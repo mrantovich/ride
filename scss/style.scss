@@ -356,24 +356,6 @@ body {
     }
 
     &__features-item {
-        height: 4.9rem;
-        padding-left: 6.7rem;
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        margin-bottom: 3.4rem;
-        display: flex;
-        position: relative;
-
-        &::after {
-            content: '';
-            width: 4.9rem;
-            height: 4.9rem;
-            background: url('../img/product-features-label.svg') no-repeat top left;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
     }
 }
 
@@ -440,6 +422,30 @@ body {
     width: 33.5rem;
     height: 0.4rem;
     background: $color-primary;
+}
+
+.list {
+
+    &__item {
+        height: 4.9rem;
+        padding-left: 6.7rem;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.4rem;
+        display: flex;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 4.9rem;
+            height: 4.9rem;
+            background: url('../img/product-features-label.svg') no-repeat top left;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
 }
 
 .title {
