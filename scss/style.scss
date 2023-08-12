@@ -39,6 +39,8 @@ body {
     }
 
     &__button {
+        width: 10.6rem;
+        height: 4.8rem;
 
         &_separate {
             margin-right: 1.5rem;
@@ -385,6 +387,7 @@ body {
 }
 
 .accessories {
+    margin-bottom: 12.7rem;
 
     &__box {
         display: flex;
@@ -401,6 +404,7 @@ body {
 
     &__content {
         display: flex;
+        margin-bottom: 11.2rem;
     }
 
     &__body {
@@ -414,6 +418,28 @@ body {
     &__list {
         display: flex;
         flex-direction: column;
+    }
+
+    &__button {
+        width: 57rem;
+        height: 9.4rem;
+    }
+}
+
+.rack {
+    display: flex;
+    margin-bottom: 7.4rem;
+
+    &__image {
+        flex: 1 1 60%;
+    }
+
+    &__body {
+        padding-left: 14.7rem;
+    }
+
+    &__body-title {
+        margin-bottom: 3.3rem;
     }
 }
 
@@ -481,8 +507,6 @@ body {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    width: 10.6rem;
-    height: 4.8rem;
     color: $color-secondary;
     background: $color-primary;
     font-size: 1.4rem;
@@ -490,6 +514,15 @@ body {
     border: 0.1rem solid $color-primary;
     border-radius: 0.8rem;
     transition: 0.3s;
+
+    &_empty {
+        background: $color-secondary;
+        color: $color-primary;
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: none;
+        border: 0.2rem solid $color-primary;
+    }
 
     &_light {
         color: $color-primary;
