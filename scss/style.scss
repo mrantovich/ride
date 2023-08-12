@@ -1,5 +1,6 @@
 @import 'nullstyle';
 @import 'colors';
+@import 'variables';
 
 html, body {
     font-size: 10px;
@@ -16,6 +17,10 @@ body {
     height: 100%;
     padding: 0 3rem;
     margin: 0 auto;
+}
+
+.main {
+    margin-bottom: 3rem;
 }
 
 .header {
@@ -74,6 +79,7 @@ body {
 
     &__info {
         max-width: 58.6rem;
+        margin-bottom: 1.8rem;
     }
 
     &__image {
@@ -199,6 +205,234 @@ body {
             object-fit: contain;
         }
     }
+
+    &__slider {
+        width: 100%;
+        height: 14.6rem;
+    }
+
+    &__slider-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    &__slider-counter {
+        font-family: $font-calistoga;
+        font-size: 15rem;
+        position: relative;
+        color: $color-secondary;
+        -webkit-text-stroke: 0.1rem $color-primary;
+        margin-right: 3.7rem;
+    }
+
+    &__slider-controls {
+        display: flex;
+        width: 10.4rem;
+        height: 4.6rem;
+    }
+
+    &__slider-button-left, &__slider-button-right {
+        cursor: pointer;
+        height: 100%;
+        width: 50%;
+        border: 0.1rem solid $color-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+
+        & span {
+            width: 0.7rem;
+            height: 0.7rem;
+            border: 0.2rem solid $color-dark;
+            border-left: none;
+            border-bottom: none;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            background: $color-dark;
+            & span {
+                border-color: $color-secondary;
+            }
+        }
+    }
+
+    &__slider-button-left {
+        border-radius: 2.3rem 0 0 2.3rem;
+        & span {
+            transform: rotate(-135deg);
+        }
+    }
+    &__slider-button-right {
+        border-radius: 0 2.3rem 2.3rem 0;
+        border-left: none;
+        & span {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.chars {
+    width: 100%;
+    padding: 1rem 0;
+    margin-bottom: 11.7rem;
+
+    &__box {
+        height: 13.7rem;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 17.4rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 0.1rem solid $color-stroke-light;
+        border-radius: 0.6rem;
+        box-shadow: 0 1.4rem 2.6rem 0 rgba($color-black, 0.06);
+    }
+
+    &__text {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+    }
+    &__unit {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    &__desc {
+        font-size: 1.3rem;
+    }
+}
+
+.product {
+    margin-bottom: 12.7rem;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 3.4rem;
+    }
+    &__subtitle {
+        margin-bottom: 2.2rem;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__image {
+        flex: 0 0 50%;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__features {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 15rem;
+    }
+
+    &__features-list li {
+    }
+
+    &__features-item {
+        height: 4.9rem;
+        padding-left: 6.7rem;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.4rem;
+        display: flex;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 4.9rem;
+            height: 4.9rem;
+            background: url('../img/product-features-label.svg') no-repeat top left;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.motor {
+    margin-bottom: 12.7rem;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 3.4rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.accessories {
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 3.4rem;
+    }
+    &__subtitle {
+        margin-bottom: 11.2rem;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__body {
+        flex: 1 1 40%;
+    }
+
+    &__body-title {
+        margin-bottom: 3.3rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .separator {
@@ -220,6 +454,20 @@ body {
             font-weight: 700;
         }
     }
+
+    &_big {
+        font-size: 5rem;
+        font-weight: 700;
+    }
+
+    &_regular {
+        font-size: 5rem;
+        font-weight: 700;
+    }
+}
+
+.subtitle {
+    font-size: 2rem;
 }
 
 .button {
