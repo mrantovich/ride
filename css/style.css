@@ -257,7 +257,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .gen__slider-counter {
   font-family: "Calistoga", cursive;
@@ -501,6 +501,53 @@ body {
 }
 .gallery__button:last-child {
   margin-bottom: 0;
+}
+
+.colors {
+  margin-bottom: 25.9rem;
+}
+.colors__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.colors__title {
+  margin-bottom: 3.4rem;
+}
+.colors__subtitle {
+  margin-bottom: 11.2rem;
+}
+.colors__bg-image {
+  width: 100%;
+  height: 87.3rem;
+  position: relative;
+}
+.colors__bg-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.colors__flavores {
+  width: 100%;
+  position: absolute;
+  bottom: -13.2rem;
+  left: 0;
+}
+.colors__flavores-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.colors__flavores-item {
+  width: 26.4rem;
+  height: 26.4rem;
+}
+.colors__flavores-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .separator {
