@@ -669,6 +669,7 @@ body {
 }
 
 .subs {
+    margin-bottom: 3.4rem;
 
     &__box {
         display: flex;
@@ -710,6 +711,81 @@ body {
     &__button {
         width: 19.6rem;
         height: 100%;
+    }
+}
+
+.footer {
+    position: relative;
+
+    &__bg {
+        position: absolute; 
+        top: 0;
+        left: 0;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__box {
+        padding-top: 9.2rem;
+        height: 100%;
+    }
+
+    &__content {
+        background: $color-primary;
+        padding-bottom: 3rem;
+    }
+
+    &__data {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 9.9rem;
+        margin-bottom: 7.1rem;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        color: $color-secondary;
+        flex: 0 1 50%;
+    }
+
+    &__column {
+        max-width: 14rem;
+    }
+
+    &__part {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 5.5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        margin-bottom: 4rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        color: $color-secondary;
+        font-size: 1.6rem;
+    }
+
+    &__copyright {
+        color: $color-secondary;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: center;
     }
 }
 
