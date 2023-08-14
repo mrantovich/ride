@@ -570,6 +570,10 @@ body {
 .testimonials {
     margin-bottom: 12.1rem;
 
+    &__content {
+        position: relative;
+    }
+
     &__box {
         display: flex;
         flex-direction: column;
@@ -579,7 +583,6 @@ body {
 }
 
 .slider {
-    position: relative;
 
     &__item {
         border: 0.1rem solid $color-gray;
@@ -593,7 +596,7 @@ body {
         }
 
         &:hover {
-            box-shadow: 0 2.5rem 1rem 0.8rem rgba($color-shadow, 0.1);
+            box-shadow: 0 0.5rem 1rem 0.8rem rgba($color-shadow, 0.1);
         }
 
     }
@@ -667,9 +670,11 @@ body {
     &__arrows {
         position: absolute;
         left: 0;
-        bottom: -8.5rem;
+        bottom: -4.5rem;
         width: 100%;
         height: 4.2rem;
+        display: flex;
+        justify-content: center;
     }
 
     &__arrow-prev, &__arrow-next {
@@ -678,26 +683,83 @@ body {
         border: 0.1rem solid $color-primary;
         border-radius: 50%;
         background: $color-primary;
-        z-index: 99;
+        transition: 0.3s;
+    }
+    &__arrow-prev.slick-disabled, &__arrow-next.slick-disabled {
+        background: $color-secondary;
+        cursor: not-allowed;
+
+        & span {
+            background: $color-primary;
+
+            &::after {
+                border-top: 0.1rem solid $color-primary;
+                border-left: 0.1rem solid $color-primary;
+            }
+        }
     }
 
-    &__arrow-prev-visible {
-        width: 4.2rem;
-        height: 4.2rem;
-        border: 0.1rem solid $color-primary;
-        border-radius: 50%;
-        background: $color-primary;
-    }
-}
+    &__arrow-prev {
+        margin-right: 2.4rem;
+        position: relative;
 
-.slick-arrow {
-    display: flex;
-    width: 4.2rem;
-    height: 4.2rem;
-    border: 0.1rem solid $color-primary;
-    border-radius: 50%;
-    background: $color-primary;
-    z-index: 1000;
+        & span {
+            display: block;
+            width: 1.4rem;
+            height: 0.1rem;
+            background: $color-secondary;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &::after {
+                content: '';
+                width: 0.7rem;
+                height: 0.7rem;
+                border-top: 0.1rem solid $color-secondary;
+                border-left: 0.1rem solid $color-secondary;
+                border-bottom: none;
+                border-right: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-45%) rotate(-45deg);
+            }
+        }
+    }
+
+    &__arrow-next {
+        margin-right: 2.4rem;
+        position: relative;
+
+        & span {
+            display: block;
+            width: 1.4rem;
+            height: 0.1rem;
+            background: $color-secondary;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &::after {
+                content: '';
+                width: 0.7rem;
+                height: 0.7rem;
+                border-top: 0.1rem solid $color-secondary;
+                border-left: 0.1rem solid $color-secondary;
+                border-bottom: none;
+                border-right: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateY(-45%) rotate(135deg);
+            }
+        }
+    }
 }
 
 .slick-initialized .slick-slide {
