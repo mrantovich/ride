@@ -668,6 +668,51 @@ body {
     padding: 2rem 0;
 }
 
+.subs {
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 1.1rem;
+    }
+    &__subtitle {
+        margin-bottom: 5.9rem;
+    }
+}
+
+.form {
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        width: 61.6rem;
+        height: 8.1rem;
+    }
+
+    &__input {
+        width: 40rem;
+        height: 100%;
+        background: $color-dim;
+        border-radius: 1rem;
+        padding: 3.8rem;
+        font-size: 2rem;
+        color: $color-primary;
+
+        &::placeholder {
+            font-size: 2rem;
+        }
+    }
+
+    &__button {
+        width: 19.6rem;
+        height: 100%;
+    }
+}
+
 
 .separator {
     display: block;
@@ -758,6 +803,11 @@ body {
         &:hover {
             border: 0.1rem solid $color-primary;
         }
+    }
+
+    &_norm-text {
+        font-size: 2rem;
+        text-transform: none;
     }
 
     &:hover {
