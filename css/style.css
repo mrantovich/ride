@@ -563,6 +563,9 @@ body {
   margin-bottom: 4.1rem;
 }
 
+.slider {
+  position: relative;
+}
 .slider__item {
   border: 0.1rem solid #D8D8D8;
   width: 36rem;
@@ -629,6 +632,46 @@ body {
 .slider__person-position {
   font-size: 1.4rem;
   font-weight: 400;
+}
+.slider__arrows {
+  position: absolute;
+  left: 0;
+  bottom: -8.5rem;
+  width: 100%;
+  height: 4.2rem;
+}
+.slider__arrow-prev, .slider__arrow-next {
+  width: 4.2rem;
+  height: 4.2rem;
+  border: 0.1rem solid #42454A;
+  border-radius: 50%;
+  background: #42454A;
+  z-index: 99;
+}
+.slider__arrow-prev-visible {
+  width: 4.2rem;
+  height: 4.2rem;
+  border: 0.1rem solid #42454A;
+  border-radius: 50%;
+  background: #42454A;
+}
+
+.slick-arrow {
+  display: flex;
+  width: 4.2rem;
+  height: 4.2rem;
+  border: 0.1rem solid #42454A;
+  border-radius: 50%;
+  background: #42454A;
+  z-index: 1000;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
+.slick-track {
+  position: relative;
 }
 
 .slick-list {
