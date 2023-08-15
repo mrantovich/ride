@@ -5,7 +5,7 @@ $(document).ready(function(){
         slidesToScroll: 3,
         variableWidth: true,
         arrows: true,
-        prevArrow: '.slider__arrow-prev',
-        nextArrow: '.slider__arrow-next'
+        prevArrow: $('.slider__arrow-prev'),
+        nextArrow: $('.slider__arrow-next')
     })
 });
