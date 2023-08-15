@@ -962,6 +962,10 @@ body {
   border-radius: 0.8rem;
   transition: 0.3s;
 }
+.button:hover {
+  color: #42454A;
+  background: #ffffff;
+}
 .button_empty {
   background: #ffffff;
   color: #42454A;
@@ -969,6 +973,10 @@ body {
   font-weight: 700;
   text-transform: none;
   border: 0.2rem solid #42454A;
+}
+.button_empty:hover {
+  background: #42454A;
+  color: #ffffff;
 }
 .button_light {
   color: #42454A;
@@ -981,10 +989,6 @@ body {
 .button_norm-text {
   font-size: 2rem;
   text-transform: none;
-}
-.button:hover {
-  color: #42454A;
-  background: #ffffff;
 }
 
 @keyframes spinning-circle {

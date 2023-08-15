@@ -1051,6 +1051,11 @@ body {
     border-radius: 0.8rem;
     transition: 0.3s;
 
+    &:hover {
+        color: $color-primary;
+        background: $color-secondary;
+    }
+
     &_empty {
         background: $color-secondary;
         color: $color-primary;
@@ -1058,6 +1063,11 @@ body {
         font-weight: 700;
         text-transform: none;
         border: 0.2rem solid $color-primary;
+
+        &:hover {
+            background: $color-primary;
+            color: $color-secondary;
+        }
     }
 
     &_light {
@@ -1073,11 +1083,6 @@ body {
     &_norm-text {
         font-size: 2rem;
         text-transform: none;
-    }
-
-    &:hover {
-        color: $color-primary;
-        background: $color-secondary;
     }
 }
 
